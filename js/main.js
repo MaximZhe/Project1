@@ -45,10 +45,12 @@ function raitingUse(){
 }
 raitingUse();
 function writeYourGenres(){
-    for (let i = 0; i < 3; i++){
-        
+    for (let i = 1; i < 4; i++){
+        let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres.push(likeGenres);
     }
 }
+writeYourGenres();
 function showMyDB(){
     if(personalMovieDB.privat == false){
         console.log(personalMovieDB);
