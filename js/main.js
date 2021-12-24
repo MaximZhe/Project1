@@ -44,5 +44,17 @@ function raitingUse(){
     }
 }
 raitingUse();
-
-console.log(personalMovieDB);
+function writeYourGenres(){
+    for (let i = 0; i < 3; i++){
+        
+    }
+}
+function showMyDB(){
+    if(personalMovieDB.privat == false){
+        console.log(personalMovieDB);
+    } else{
+        console.log("Error");
+    }
+    
+}
+showMyDB();
