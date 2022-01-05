@@ -64,9 +64,9 @@ let personalMovieDB = {
         
     },
 };
-/*personalMovieDB.start();
+personalMovieDB.start();
 personalMovieDB.infoFilms();
-personalMovieDB.raitingUse();*/
+personalMovieDB.raitingUse();
 personalMovieDB.writeYourGenres();
 personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB();
