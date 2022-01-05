@@ -39,16 +39,14 @@ let personalMovieDB = {
     writeYourGenres : function () {
         for (let i = 1; i < 4; i++){
             let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-            if (likeGenres == ""){
-                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-            }else if (likeGenres == null){
-                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-            };
             while ( likeGenres == "" || likeGenres == null){
                 likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
             };
             personalMovieDB.genres.push(likeGenres);
         };
+        this.genres.forEach(function(likeGenres , i , ){
+            console.log(`Любимый жанр # ${i + 1} - это ${likeGenres}`);
+        });
     },
     toggleVisibleMyDB : function (){
         if(personalMovieDB.privat == false){
@@ -66,9 +64,9 @@ let personalMovieDB = {
         
     },
 };
-personalMovieDB.start();
+/*personalMovieDB.start();
 personalMovieDB.infoFilms();
-personalMovieDB.raitingUse();
+personalMovieDB.raitingUse();*/
 personalMovieDB.writeYourGenres();
 personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB();
