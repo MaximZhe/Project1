@@ -7,7 +7,7 @@ let personalMovieDB = {
     genres: [],
     privat: true,
     start : function (){
-        let number0fFilms = prompt("Сколько фильмов?");
+        let number0fFilms = +prompt("Сколько фильмов?");
         while ( number0fFilms == "" || number0fFilms == null || isNaN(number0fFilms)){
            number0fFilms = prompt("Сколько фильмов?"); 
         };
@@ -38,18 +38,18 @@ let personalMovieDB = {
     },
     writeYourGenres : function () {
         for (let i = 1; i < 4; i++){
-            let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+            let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase;
             while ( likeGenres == "" || likeGenres == null){
-                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase;
             };
             personalMovieDB.genres.push(likeGenres);
         };
-        this.genres.forEach(function(likeGenres , i , ){
-            console.log(`Любимый жанр # ${i + 1} - это ${likeGenres}`);
+        this.genres.forEach(function(item , i , ){
+            console.log(`Любимый жанр # ${i + 1} - это ${item}`);
         });
     },
     toggleVisibleMyDB : function (){
-        if(personalMovieDB.privat == false){
+        if(personalMovieDB.privat){
             personalMovieDB.privat = true;
         } else{
             personalMovieDB.privat = false;
