@@ -38,9 +38,9 @@ let personalMovieDB = {
     },
     writeYourGenres : function () {
         for (let i = 1; i < 4; i++){
-            let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase;
+            let likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase();
             while ( likeGenres == "" || likeGenres == null){
-                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase;
+                likeGenres = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase();
             };
             personalMovieDB.genres.push(likeGenres);
         };
